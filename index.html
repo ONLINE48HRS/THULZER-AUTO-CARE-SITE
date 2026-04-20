@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thulzer Autocare - Professional auto repairs, diagnostics, tyres, wheel alignment, panel beating & 24/7 emergency call-out in Barberton. Your Safety Is Our Priority.">
+    <meta name="keywords" content="auto repair, car service, Barberton, wheel alignment, panel beating, emergency mechanic, tyres, brakes, diagnostics">
+    <meta name="author" content="Thulzer Autocare">
+    <title>Thulzer Autocare | Professional Auto Repairs & 24/7 Emergency Service - Barberton</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --dark-blue: #1e3a8a;
+            --primary-red: #dc2626;
+            --bright-red: #ef4444;
+            --white: #ffffff;
+            --dark-charcoal: #111827;
+            --medium-gray: #374151;
+            --light-gray: #f3f4f6;
+            --border-gray: #e5e7eb;
+            --success-green: #059669;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-charcoal);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-red);
+            color: var(--white);
+            box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #b91c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-whatsapp {
+            background: var(--success-green);
+            color: var(--white);
+        }
+
+        .btn-whatsapp:hover {
+            background: #047857;
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            color: var(--dark-blue);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--medium-gray);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            height: 64px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        @media (max-width: 767px) {
+            .logo img {
+                height: 52px;
+            }
+        }
+
+        .nav-menu {
+            display: none;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            font-weight: 600;
+            color: var(--dark-charcoal);
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-red);
+        }
+
+        .nav-cta {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--dark-charcoal);
+            transition: 0.3s;
+            border-radius: 3px;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 4rem 0 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="80" cy="20" r="40" fill="rgba(255,255,255,0.03)"/></svg>');
+            background-size: cover;
+            opacity: 0.5;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+
+        .badge-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .hero-image {
+            display: none;
+        }
+
+        .emergency-badge {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: var(--primary-red);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .emergency-badge img {
+            width: 120px;
+            height: auto;
+            display: block;
+            margin: 0 auto 0.5rem;
+        }
+
+        .emergency-badge-text {
+            font-weight: 700;
+            font-size: 0.875rem;
+            line-height: 1.2;
+        }
+
+        /* Trust Strip */
+        .trust-strip {
+            background: var(--light-gray);
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .trust-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .brand-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem 0;
+            opacity: 0.85;
+        }
+
+        .brand-logos img {
+            height: 40px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+        }
+
+        .brand-logos img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.08);
+            opacity: 1;
+        }
+
+        .brand-fallback {
+            font-weight: 700;
+            color: var(--medium-gray);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .trust-points {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .trust-point {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-charcoal);
+            font-size: 0.9rem;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            color: var(--dark-blue);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+            color: var(--medium-gray);
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.75rem;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--light-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-blue);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            border-top-color: var(--primary-red);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: var(--dark-blue);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .service-category {
+            margin-bottom: 3rem;
+        }
+
+        .service-category-title {
+            font-size: 1.5rem;
+            color: var(--dark-charcoal);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--primary-red);
+            display: inline-block;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: var(--white);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 1rem;
+            background: var(--light-gray);
+            transition: all 0.3s;
+        }
+
+        .why-card:hover {
+            background: var(--dark-blue);
+            color: var(--white);
+        }
+
+        .why-card:hover h3,
+        .why-card:hover p {
+            color: var(--white);
+        }
+
+        .why-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--primary-red);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.75rem;
+        }
+
+        .why-card h3 {
+            color: var(--dark-blue);
+            margin-bottom: 0.75rem;
+        }
+
+        .why-card p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Mission Vision Values */
+        .mvv {
+            background: linear-gradient(to bottom, var(--dark-blue), var(--primary-blue));
+            color: var(--white);
+        }
+
+        .mvv .section-title,
+        .mvv .section-subtitle {
+            color: var(--white);
+        }
+
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .mvv-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .mvv-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .mvv-card p, .mvv-card li {
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .mvv-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .mvv-card li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .mvv-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--bright-red);
+            font-weight: bold;
+        }
+
+        /* Process Section */
+        .process {
+            background: var(--white);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            counter-reset: step;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 1rem;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .process-step:hover {
+            background: var(--dark-blue);
+            color: var(--white);
+        }
+
+        .process-step:hover .step-number {
+            background: var(--primary-red);
+            color: var(--white);
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            counter-increment: step;
+        }
+
+        .step-content h3 {
+            color: var(--dark-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+
+        .process-step:hover .step-content h3,
+        .process-step:hover .step-content p {
+            color: var(--white);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background: var(--light-gray);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--dark-charcoal);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .gallery-image-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item:hover .gallery-image-bg {
+            transform: scale(1.08);
+        }
+
+        .gallery-image-bg::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 1.5rem 1.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--white);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+            z-index: 2;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(-5px);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            color: var(--dark-blue);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: start;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-text h4 {
+            color: var(--dark-charcoal);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-text p, .contact-text a {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .contact-text a:hover {
+            color: var(--primary-red);
+        }
+
+        .all-phones {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .all-phones h4 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .phone-list {
+            list-style: none;
+        }
+
+        .phone-list li {
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .phone-list a {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .contact-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .contact-form {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-charcoal);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--border-gray);
+            border-radius: 0.5rem;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-note {
+            font-size: 0.875rem;
+            color: var(--medium-gray);
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-charcoal);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand .logo-name {
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-brand p {
+            opacity: 0.8;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary-red);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.875rem;
+        }
+
+        /* Mobile Sticky Bottom Bar */
+        .mobile-sticky-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            z-index: 999;
+            padding: 0.75rem 1rem;
+            gap: 0.75rem;
+        }
+
+        .mobile-sticky-bar .btn {
+            flex: 1;
+            padding: 1rem;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex;
+            }
+
+            .nav-cta {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-image {
+                display: block;
+            }
+
+            .hero-cta {
+                flex-direction: row;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .mvv-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+
+            .about-features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .trust-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .brand-logos {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .brand-logos img {
+                height: 28px;
+            }
+            
+            .brand-fallback {
+                font-size: 0.75rem;
+            }
+
+            .mobile-sticky-bar {
+                display: flex;
+            }
+
+            body {
+                padding-bottom: 80px;
+            }
+
+            .hero {
+                padding: 3rem 0 4rem;
+            }
+
+            .emergency-badge {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin: 2rem auto 0;
+                width: fit-content;
+            }
+
+            .section-padding {
+                padding: 3rem 0;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step-number {
+                margin: 0 auto;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            
+            .gallery-caption {
+                font-size: 1rem;
+                padding: 1.5rem 1.25rem 1.25rem;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .mb-0 { margin-bottom: 0; }
+        .mt-2 { margin-top: 2rem; }
+        
+        .highlight {
+            color: var(--primary-red);
+        }
+
+        /* Loading Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <img src="logo-main.jpeg" alt="Thulzer Autocare Logo">
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="tel:+27824772427" class="btn btn-primary">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                    Call Now
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Professional Auto Repairs, Diagnostics & <span class="highlight">24/7 Emergency Call-Out</span> in Barberton</h1>
+                <p>From servicing and brakes to tyres, diagnostics, wheel alignment, panel beating and roadside support. Reliable solutions to keep you safe on the road.</p>
+                
+                <div class="hero-cta">
+                    <a href="tel:+27824772427" class="btn btn-primary">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                        Call Now
+                    </a>
+                    <a href="https://wa.me/27824772427" target="_blank" class="btn btn-secondary">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        WhatsApp Us
+                    </a>
+                </div>
+
+                <div class="hero-badges">
+                    <div class="badge">
+                        <svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        24/7 Emergency Call-Out
+                    </div>
+                    <div class="badge">
+                        <svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        All Major Vehicle Brands
+                    </div>
+                    <div class="badge">
+                        <svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        Professional Technicians
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="emergency-badge">
+                    <img src="logo-24-7.jpeg" alt="24/7 Emergency Call Out">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+        <div class="container trust-container">
+            <div class="brand-logos">
+                <img src="https://logo.clearbit.com/toyota.com" alt="Toyota" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span class=\'brand-fallback\'>Toyota</span>')">
+                <img src="https://logo.clearbit.com/nissan-global.com" alt="Nissan" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span class=\'brand-fallback\'>Nissan</span>')">
+                <img src="https://logo.clearbit.com/landrover.com" alt="Land Rover" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span class=\'brand-fallback\'>Land Rover</span>')">
+                <img src="https://logo.clearbit.com/mercedes-benz.com" alt="Mercedes-Benz" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span class=\'brand-fallback\'>Mercedes-Benz</span>')">
+                <img src="https://logo.clearbit.com/mitsubishi-motors.com" alt="Mitsubishi" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span class=\'brand-fallback\'>Mitsubishi</span>')">
+                <img src="https://logo.clearbit.com/jeep.com" alt="Jeep" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span class=\'brand-fallback\'>Jeep</span>')">
+                <img src="https://logo.clearbit.com/bmw.com" alt="BMW" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span class=\'brand-fallback\'>BMW</span>')">
+                <img src="https://logo.clearbit.com/ford.com" alt="Ford" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span class=\'brand-fallback\'>Ford</span>')">
+                <img src="https://logo.clearbit.com/isuzu.co.jp" alt="Isuzu" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span class=\'brand-fallback\'>Isuzu</span>')">
+            </div>
+            <div class="trust-points">
+                <div class="trust-point">
+                    <svg width="20" height="20" fill="var(--success-green)" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Genuine spare parts
+                </div>
+                <div class="trust-point">
+                    <svg width="20" height="20" fill="var(--success-green)" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Modern equipment
+                </div>
+                <div class="trust-point">
+                    <svg width="20" height="20" fill="var(--success-green)" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Fleet & insurance work
+                </div>
+                <div class="trust-point">
+                    <svg width="20" height="20" fill="var(--success-green)" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Competitive pricing
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Trusted Automotive Care in Barberton</h2>
+                    <p>Thulzer Autocare was established to meet the growing demand for professional auto care services and vehicle maintenance in Barberton and surrounding areas. We specialize in a wide range of makes and models, providing comprehensive solutions for all your automotive needs.</p>
+                    <p>Our focus is on delivering professional service, quality workmanship, and ensuring your comfort and safety on the road—all at reasonable pricing. We provide free vehicle visual routine inspections and expert advice to keep your vehicle in optimal condition.</p>
+                    <p>We supply genuine spare parts and utilize modern, digitalized equipment for accurate diagnostics and repairs. From breakdown-related support to routine maintenance, we are your trusted local automotive service provider.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Trusted by private, government, NGO, mining & corporate clients</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Free vehicle visual inspections</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Genuine spare parts supply</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Modern digitalized equipment</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="workshop.jpeg" alt="Thulzer Autocare Workshop" style="width: 100%; border-radius: 1rem; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-padding services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive automotive solutions for all vehicle types and makes</p>
+
+            <div class="service-category">
+                <h3 class="service-category-title">Mechanical & Repairs</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Oil Change</h3>
+                        <p>Regular oil changes using quality lubricants to keep your engine running smoothly and extend its lifespan.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🛑</div>
+                        <h3>Brakes</h3>
+                        <p>Complete brake system inspection, repair, and replacement to ensure your safety on the road.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⚙️</div>
+                        <h3>Servicing</h3>
+                        <p>Comprehensive vehicle servicing to maintain performance, reliability, and manufacturer warranties.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔋</div>
+                        <h3>Batteries</h3>
+                        <p>Battery testing, replacement, and electrical system diagnostics to prevent breakdowns.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔩</div>
+                        <h3>CV Joints</h3>
+                        <p>Expert CV joint repair and replacement for smooth power transmission and handling.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <h3>Clutches</h3>
+                        <p>Clutch system repairs and replacements for optimal gear changing and vehicle control.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3 class="service-category-title">Diagnostics & Wheels</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">💻</div>
+                        <h3>Diagnostic Check</h3>
+                        <p>Advanced computer diagnostics to quickly identify and resolve engine and electronic issues.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">❄️</div>
+                        <h3>Air Condition Check</h3>
+                        <p>Complete A/C system diagnostics, gas refills, and repairs for year-round comfort.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🎯</div>
+                        <h3>3D Wheel Alignment</h3>
+                        <p>Precision 3D wheel alignment using modern equipment for better handling and tyre life.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⚖️</div>
+                        <h3>Wheel Balance</h3>
+                        <p>Professional wheel balancing to eliminate vibrations and ensure smooth driving.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🛞</div>
+                        <h3>Tyres</h3>
+                        <p>Wide range of tyres, fitting, balancing, and repairs for all vehicle types.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Wheel Bearings</h3>
+                        <p>Wheel bearing inspection and replacement to prevent noise and ensure safety.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3 class="service-category-title">Body, Exhaust & Specialty</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🚗</div>
+                        <h3>Panel Beating</h3>
+                        <p>Professional panel beating and body repairs to restore your vehicle's appearance and value.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔊</div>
+                        <h3>Exhaust Systems</h3>
+                        <p>Complete exhaust system repairs and replacements for performance and compliance.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🛠️</div>
+                        <h3>Suspension Repairs</h3>
+                        <p>Suspension system repairs and upgrades for improved ride comfort and handling.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"></div>
+                        <h3>Mechanical Repairs</h3>
+                        <p>General mechanical repairs for all vehicle makes and models by experienced technicians.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3>Insurance Services</h3>
+                        <p>We work directly with insurance companies for hassle-free claim repairs and assessments.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🌍</div>
+                        <h3>Importation Services</h3>
+                        <p>Assistance with vehicle importation compliance and modifications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3 class="service-category-title">Commercial & Custom</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🐄</div>
+                        <h3>Cattle/Hunting Rails</h3>
+                        <p>Custom cattle and hunting rail installations for farming and outdoor vehicles.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🚚</div>
+                        <h3>Fleet Services</h3>
+                        <p>Comprehensive fleet maintenance programs for businesses and organizations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding why-us" id="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Thulzer Autocare?</h2>
+            <p class="section-subtitle">We always deliver more than expected with effective, reliable solutions</p>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">👨‍🔧</div>
+                    <h3>Trained Technicians</h3>
+                    <p>Skilled, experienced professionals dedicated to quality workmanship and continuous training.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💻</div>
+                    <h3>Modern Equipment</h3>
+                    <p>State-of-the-art digitalized diagnostic and repair equipment for accurate service.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💰</div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Fair, transparent pricing with no hidden costs. Quality service that fits your budget.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🔍</div>
+                    <h3>Free Inspections</h3>
+                    <p>Complimentary visual routine inspections to identify potential issues early.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">⚡</div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Efficient service delivery to get you back on the road as quickly as possible.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">✅</div>
+                    <h3>Genuine Parts</h3>
+                    <p>We supply and use only genuine, quality spare parts for reliable, long-lasting repairs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Vision Values -->
+    <section class="section-padding mvv">
+        <div class="container">
+            <h2 class="section-title">Our Mission, Vision & Values</h2>
+            <p class="section-subtitle">Guided by principles that put your safety and satisfaction first</p>
+
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <h3>
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                        Vision
+                    </h3>
+                    <p>To give customers peace of mind by restoring vehicles to best condition with less time and lower cost while achieving customer satisfaction.</p>
+                </div>
+
+                <div class="mvv-card">
+                    <h3>
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+                        Mission
+                    </h3>
+                    <p>To achieve the highest customer satisfaction, complete jobs within the stipulated time, and deliver the highest quality work in the most efficient and economical way.</p>
+                </div>
+
+                <div class="mvv-card">
+                    <h3>
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+                        Core Values
+                    </h3>
+                    <ul>
+                        <li>Sustainability and environmentally friendly action</li>
+                        <li>Innovation and excellence</li>
+                        <li>Teamwork and punctuality</li>
+                        <li>Mutual respect, honesty, and hard work</li>
+                        <li>Doing the right thing at the right time and place</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section-padding process" id="process">
+        <div class="container">
+            <h2 class="section-title">Our Service Process</h2>
+            <p class="section-subtitle">Simple, transparent steps from booking to delivery</p>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Book Service Appointment</h3>
+                        <p>Contact us via phone, WhatsApp, or our online form to schedule your service at a convenient time.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Diagnosis Report & Quote</h3>
+                        <p>We perform a thorough inspection and provide a detailed diagnosis with a transparent, no-obligation quote.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Job Allocation</h3>
+                        <p>Once approved, we allocate your vehicle to our skilled technicians with the necessary parts and equipment.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Repair Process</h3>
+                        <p>Expert technicians perform the required repairs or servicing using modern equipment and genuine parts.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Quality Check</h3>
+                        <p>Every job undergoes rigorous quality control testing to ensure it meets our high standards.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Delivery</h3>
+                        <p>We notify you when your vehicle is ready, explain the work done, and provide maintenance advice.</p>
+                    </div>
+                </div>
+
+                <div class="process-step" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>Follow Up</h3>
+                        <p>We follow up to ensure your complete satisfaction and address any questions or concerns you may have.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section-padding gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Workshop & Facilities</h2>
+            <p class="section-subtitle">Professional facilities equipped to handle all your automotive needs</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image-bg" style="background-image: url('hero-vehicle.jpeg')"></div>
+                    <div class="gallery-caption">24/7 Call-Out Support Vehicle</div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image-bg" style="background-image: url('workshop.jpeg')"></div>
+                    <div class="gallery-caption">Modern Workshop Facilities</div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image-bg" style="background-image: url('technicians.jpeg')"></div>
+                    <div class="gallery-caption">Trained Mechanics & Technicians</div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image-bg" style="background-image: url('reception.jpeg')"></div>
+                    <div class="gallery-caption">Customer Reception Area</div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image-bg" style="background-image: url('equipment.jpeg')"></div>
+                    <div class="gallery-caption">Advanced Diagnostic Equipment</div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image-bg" style="background-image: url('premises.jpeg')"></div>
+                    <div class="gallery-caption">Secure, Fully Fenced Premises</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us & Book a Service</h2>
+            <p class="section-subtitle">Ready to get your vehicle serviced? Get in touch today</p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Address</h4>
+                                <p>2417 De Villiers Street<br>Barberton, 1300<br>South Africa</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:thulzer.autocare@gmail.com">thulzer.autocare@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Primary Contact</h4>
+                                <p>
+                                    <strong>Tel:</strong> <a href="tel:0131706990">013-170-6990</a><br>
+                                    <strong>Mobile:</strong> <a href="tel:+27824772427">+27 82 477 2427</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Contact Person</h4>
+                                <p>Mr. Thulane Dlamini<br>Support Service Manager</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="all-phones">
+                        <h4>All Contact Numbers</h4>
+                        <ul class="phone-list">
+                            <li>Tel: <a href="tel:0131706990">013-170-6990</a></li>
+                            <li>Mobile: <a href="tel:+27824772427">+27 82 477 2427</a></li>
+                            <li>Alternate: <a href="tel:+27824772426">+27 82 477 2426</a></li>
+                            <li>Director: <a href="tel:+27712856361">+27 71 285 6361</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-cta">
+                        <a href="tel:+27824772427" class="btn btn-primary">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                            Call Now
+                        </a>
+                        <a href="https://wa.me/27824772427" target="_blank" class="btn btn-whatsapp">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                            WhatsApp Us
+                        </a>
+                        <a href="mailto:thulzer.autocare@gmail.com" class="btn btn-secondary">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                            Email Us
+                        </a>
+                    </div>
+
+                    <p class="form-note">We assist with private vehicles, fleets, insurance jobs, and breakdown-related matters.</p>
+                </div>
+
+                <div class="contact-form">
+                    <h3 style="color: var(--dark-blue); margin-bottom: 1.5rem; font-size: 1.5rem;">Request a Quote</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Your contact number">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vehicle">Vehicle Make / Model *</label>
+                            <input type="text" id="vehicle" name="vehicle" required placeholder="e.g., Toyota Hilux 2020">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Needed *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service...</option>
+                                <option value="Oil Change">Oil Change</option>
+                                <option value="Servicing">General Servicing</option>
+                                <option value="Brakes">Brakes</option>
+                                <option value="Tyres">Tyres</option>
+                                <option value="Diagnostics">Diagnostic Check</option>
+                                <option value="Wheel Alignment">3D Wheel Alignment</option>
+                                <option value="Wheel Balance">Wheel Balance</option>
+                                <option value="Air Conditioning">Air Conditioning</option>
+                                <option value="Battery">Battery</option>
+                                <option value="Panel Beating">Panel Beating</option>
+                                <option value="Suspension">Suspension Repairs</option>
+                                <option value="Clutch">Clutch</option>
+                                <option value="CV Joints">CV Joints</option>
+                                <option value="Exhaust">Exhaust Systems</option>
+                                <option value="Emergency">Emergency Call-Out</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Describe the issue or service you need..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Request a Quote
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-name" style="font-size: 1.75rem;">Thulzer Autocare</div>
+                    <p style="color: var(--primary-red); font-weight: 600; margin-bottom: 1rem;">Your Safety Is Our Priority</p>
+                    <p>Professional auto care and maintenance solutions in Barberton. We provide reliable, affordable vehicle care with genuine parts and modern equipment.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="https://wa.me/27824772427" target="_blank" style="color: var(--white); opacity: 0.8; font-size: 1.5rem;">WhatsApp</a>
+                        <a href="tel:+27824772427" style="color: var(--white); opacity: 0.8; font-size: 1.5rem;">Call</a>
+                        <a href="mailto:thulzer.autocare@gmail.com" style="color: var(--white); opacity: 0.8; font-size: 1.5rem;">Email</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Mechanical Repairs</a></li>
+                        <li><a href="#services">Diagnostics</a></li>
+                        <li><a href="#services">Tyres & Wheels</a></li>
+                        <li><a href="#services">Panel Beating</a></li>
+                        <li><a href="#services">24/7 Emergency</a></li>
+                        <li><a href="#services">Fleet Services</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Thulzer Autocare. All rights reserved. | 2417 De Villiers Street, Barberton, 1300 | www.thulzerautocare.co.za</p>
+                <p style="margin-top: 0.5rem; font-size: 0.8rem;">Professional auto care and maintenance solutions in Barberton</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Bottom Bar -->
+    <div class="mobile-sticky-bar">
+        <a href="tel:+27824772427" class="btn btn-primary">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            Call Now
+        </a>
+        <a href="https://wa.me/27824772427" target="_blank" class="btn btn-whatsapp">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            WhatsApp
+        </a>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+            if (navMenu.style.display === 'flex') {
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '100%';
+                navMenu.style.left = '0';
+                navMenu.style.right = '0';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.background = 'white';
+                navMenu.style.padding = '2rem';
+                navMenu.style.boxShadow = '0 4px 6px -1px rgba(0,0,0,0.1)';
+                navMenu.style.gap = '1.5rem';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    navMenu.style.display = 'none';
+                }
+            });
+        });
+
+        // Sticky Header
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Form Submission
+        const bookingForm = document.getElementById('bookingForm');
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(bookingForm);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would normally send the data to a server
+            // For now, we'll show an alert and prepare a WhatsApp message
+            const message = `New Service Request:%0A%0AName: ${data.fullName}%0APhone: ${data.phone}%0AEmail: ${data.email || 'N/A'}%0AVehicle: ${data.vehicle}%0AService: ${data.service}%0AMessage: ${data.message || 'N/A'}`;
+            
+            const whatsappUrl = `https://wa.me/27824772427?text=${message}`;
+            
+            if (confirm('Thank you for your enquiry! Would you like to send this via WhatsApp for faster response?')) {
+                window.open(whatsappUrl, '_blank');
+            }
+            
+            bookingForm.reset();
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .why-card, .process-step, .gallery-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
