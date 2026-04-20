@@ -673,79 +673,6 @@
             color: var(--white);
         }
 
-        /* Gallery Section */
-        .gallery {
-            background: var(--light-gray);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 1rem;
-            overflow: hidden;
-            aspect-ratio: 4/3;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            background: var(--dark-charcoal);
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .gallery-image-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .gallery-item:hover .gallery-image-bg {
-            transform: scale(1.08);
-        }
-
-        .gallery-image-bg::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 60%;
-            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
-            pointer-events: none;
-        }
-
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 2rem 1.5rem 1.5rem;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--white);
-            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
-            z-index: 2;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
-            transform: translateY(0);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover .gallery-caption {
-            transform: translateY(-5px);
-        }
-
         /* Contact Section */
         .contact {
             background: var(--white);
@@ -1008,10 +935,6 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .contact-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -1044,10 +967,6 @@
             }
 
             .process-steps {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
@@ -1097,16 +1016,6 @@
             .step-number {
                 margin: 0 auto;
             }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-            
-            .gallery-caption {
-                font-size: 1rem;
-                padding: 1.5rem 1.25rem 1.25rem;
-            }
         }
 
         /* Utility Classes */
@@ -1143,7 +1052,6 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#why-us">Why Us</a></li>
                 <li><a href="#process">Process</a></li>
-                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
@@ -1554,46 +1462,6 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="section-padding gallery" id="gallery">
-        <div class="container">
-            <h2 class="section-title">Our Workshop & Facilities</h2>
-            <p class="section-subtitle">Professional facilities equipped to handle all your automotive needs</p>
-
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-image-bg" style="background-image: url('hero-vehicle.jpeg')"></div>
-                    <div class="gallery-caption">24/7 Call-Out Support Vehicle</div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="gallery-image-bg" style="background-image: url('workshop.jpeg')"></div>
-                    <div class="gallery-caption">Modern Workshop Facilities</div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="gallery-image-bg" style="background-image: url('technicians.jpeg')"></div>
-                    <div class="gallery-caption">Trained Mechanics & Technicians</div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="gallery-image-bg" style="background-image: url('reception.jpeg')"></div>
-                    <div class="gallery-caption">Customer Reception Area</div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="gallery-image-bg" style="background-image: url('equipment.jpeg')"></div>
-                    <div class="gallery-caption">Advanced Diagnostic Equipment</div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="gallery-image-bg" style="background-image: url('premises.jpeg')"></div>
-                    <div class="gallery-caption">Secure, Fully Fenced Premises</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section class="section-padding contact" id="contact">
         <div class="container">
@@ -1760,7 +1628,7 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#why-us">Why Choose Us</a></li>
                         <li><a href="#process">Our Process</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
@@ -1886,7 +1754,7 @@
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.service-card, .why-card, .process-step, .gallery-item').forEach(el => {
+        document.querySelectorAll('.service-card, .why-card, .process-step').forEach(el => {
             observer.observe(el);
         });
     </script>
